@@ -18,6 +18,7 @@ if (args.Length == 0)
 }
 
 var db = new SkyrimDescriberContext();
+db.Database.Migrate();
 
 ProcessingMode mode = ProcessingMode.Add;
 if (args[0] == "--export")
